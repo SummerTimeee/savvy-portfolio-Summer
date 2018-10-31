@@ -1,8 +1,8 @@
-# Hello World!
+# Savvy Coders portfolio !
 
-## Also Hello World!
+## A little about me !
 
-plain ol' text
+
 
 
 ![](https://img.sndimg.com/food/image/upload/w_412,h_294,c_fill,fl_progressive,q_80/v1/img/recipes/51/97/5/pic5L61hj.jpg)
