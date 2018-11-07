@@ -1,0 +1,101 @@
+body {
+    background-color: grey;
+}
+p {
+    font-style: italic;
+    color: black;
+    font-size: 120%;
+}
+h2 {
+    font-family: 'Segoe UI';
+    font-size: 18;
+    background-color: black;
+}
+h1 {
+    font-style: bold;
+}
+h3 {
+    font-weight: 300;
+    text-shadow: 1px 1px 1px black;
+    font-family: 'Times New Roman', Times, serif
+}
+li {
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif
+}
+#middle {
+    font-size: 1em;
+    font-style: italic;
+}
+#navigation {
+    background-color: #1f396b;
+
+}
+#header {
+    background-color: lightblue;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+#content {
+    background-color black;
+    padding: 30;
+    margin: 
+    
+}
+#footer {
+    background-color:whitesmoke;
+    margin: 1em 3em;
+}
+img {
+    display: block;
+    margin: 1em auto;
+    max-width: 300px;
+    width: 60%;
+    height: 20%;
+}
+.container {
+    margin: 0 auto;
+    max-width: 900px;
+  width: 90%;
+}
+.brand{
+    color: yellow;
+
+}
+
+#navigation > ul  li {
+    background-color: purple;
+}
+#naviagation li {
+    background-color: yellow;
+}
+.container > h2,
+.container > h3 {
+    color: red;
+}
+#header h1,
+#header h2 {
+color: red;
+}
+#navigation li:first-child {
+    background-color: blue;
+}
+#navigation li:last-child; {
+    background-color: violet;
+} 
+#navigation li:nth-child(2n) {
+    background-color: hotpink;
+}
+#navigation li:hover {
+    background-color: orange;
+}
+#navigation > ul > li {
+    display: inline;
+}
+#navigation .dropdown {
+    display: none;
+}
+#navigation a:hover + .dropdown {
+    display: block;
+}
