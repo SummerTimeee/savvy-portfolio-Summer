@@ -1,7 +1,8 @@
 body {
-    background-color: grey;
+    background-color: white;
     margin: 10px;
     display: grid;
+    padding: -40%;
     min-height: 100vh;
     grid-template-rows: min-content min-content auto min-content;
     grid-template-areas:
@@ -17,24 +18,24 @@ body {
     grid-area: navigation;
     flex-direction: row;
 }
-
-.container {
-    width: 100%;
-    padding: -45%;
-}
-
 #navigation ul {
     
     text-align: center;
     font-family:'Courier New', Courier, monospace;
     
 }
+
 #navigation li {
     font-weight: 200;
     letter-spacing: 1px;
     background-color: yellowgreen;
     padding: 20px;
 }
+.container {
+    width: 100%;
+    padding: -45%; 
+}
+
     
 .dropdown {
     position: relative;
@@ -73,17 +74,15 @@ li {
     font-family: 'Times New Roman', Times, serif
 }
 
-#header {
-    width: 90%;
+#Summer {
+    width: 80S%;
     max-width: 900px;
     margin: 0 auto;
-    text-align: left;
     color: lightblue;
     grid-area: header;
 }
 
-h1 {
-    font-style: bold;
+#Summer h1 {
     text-transform: uppercase;
     color: lightblue;
     text-align: left;
@@ -91,79 +90,82 @@ h1 {
     background-color: grey;
 }
 
-.image {
-    text-align: center;
-    text-shadow: black;
-    letter-spacing: 40%;
+#Summer img{
+     text-align: center;
 }
+#Summer h3 {
+    color: lightblue;
+    font-family: 'Taviraj', serif;
 
-p {
+}
+#Summer p {
     font-family: 'Special Elite', cursive;
     color: black;
     font-size: 22px;
     font-weight: bold;
     width: 100%;
-    line-height: 2.4em;
+    line-height: 2.0em;
     text-align: center;
-    border: white solid 10px;
-    border-radius: 15px;
+    border-style: solid;
+    border-width: 3px 3px;
+    min-width: 400px;
+    max-width: 6900px;
 }
-
-#content {
-    background-color black;
-    padding: 40;
-    margin: 0;
-    grid-area: content;
-}
-
 
 h2 {
-    font-family: 'Segoe UI';
-    font-size: 35px;
-    color:black;
-    text-shadow:red;
-    border: 3px solid black;
-    background-color: yellow;
-    font-family: 'Monoton', cursive;
-    letter-spacing: 6px;
-}
-
-.image a {
-    border: 1px solid black;
-    margin: 45%;
+    border-style: solid;
+    border-width: 45px 240px;
+    height: 20%;
+    width: 58%;
+    border-color: black;
     text-align: center;
-    padding: 100%
-}
+    font-family: 'Fontdiner Swanky', cursive;
+    font-size: 35px;
 
-#img-one{
-margin-top:240px;
 }
-
+#content {
+    text-align: center;
+}
+#content p {
+    width: 100%;
+    height: 20%;
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 3px 3px; 
+    text-align: center;
+    font-family: 'IM Fell Double Pica SC', serif;
+}
+#img-one {
+    
+    border-width: 20%;
+}
 #img-two {
-    margin-top: 240px;
+   
 }
 #img-three {
-    margin-top: 240px;
+   
 }
 #img-four {
-    margin-top: 240px;
+    
 }
-
 #footer {
+    width: 100%;
     background-color: forestgreen;
     margin: 1em 1em;
     font-family: 'Bangers', cursive;
     grid-area: footer;
     font-size: 25px;
-    
+    font-size: 28px;
+    text-align: center;
 }
 
 .container > h2,
 .container > h3 {
 }
 
-h4 {
+#Footer h4 {
     text-align: center;
+
 }
 
 @media (min-width: 750px) {
