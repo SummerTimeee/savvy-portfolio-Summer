@@ -1,4 +1,6 @@
-export default `
+export default function Footer(){
+    return `
+
 <div id="footer" class="container">
         <h4> Contact us! </h4>
 
@@ -13,3 +15,4 @@ export default `
     </div>
 
 `;
+}
