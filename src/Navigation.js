@@ -6,7 +6,7 @@ export default function Navigation(){
         <a href="./book an appointment">book an appointment</a>
     </li>
     <li>
-        <a href="./part & tools">parts & tools</a>
+        <a href="./parts & tools">parts & tools</a>
     </li>
     <li>
         <a href="./about us">about us</a>

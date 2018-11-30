@@ -5,10 +5,11 @@ export default function Footer(){
         <h4> Contact us! </h4>
 
         <ul>
+        
 
-            <li id="middle"><i class="fas fa-phone"></i>618-123-4567</li>
-            <li id="middle"><i class="fas fa-briefcase"></i> 3467 Sesame Street Ave</li>
-            <li id="middle"><i class="fas fa-envelope-open"></i>phonedoc@gmail.com</li>
+            <p id="middle"><i class="fas fa-phone"></i>618-531-0909</p>
+            <p id="middle"><i class="fas fa-briefcase"></i> 3467 Sesame Street Ave</p>
+            <p id="middle"><i class="fas fa-envelope-open"></i>summerrichards01@gmail.com</p>
 
         </ul>
 
