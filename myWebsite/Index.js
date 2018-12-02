@@ -7,16 +7,16 @@ import greet from './src/Greeting';
 var State = {
     'active': 'home',
     'home': {
-        'title': 'My Savvy Coders Project'
+        'title': 'Phone doc'
     },
-    'blog': {
-        'title': 'this is my blog'
-    },
-    'contact': {
-        'title': 'hit me up bro'
-    },
-    'projects': {
+    'book an appointment': {
         'title': 'lol'
+    },
+    'parts & tools': {
+        'title': 'stuff'
+    },
+    'about us': {
+        'title': 'Contact Me'
     }
 };
 

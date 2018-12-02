@@ -10,13 +10,13 @@ var State = {
         'title': 'My Savvy Coders Project'
     },
     'blog': {
-        'title': 'this is my blog'
+        'title': 'check out my blog'
     },
     'contact': {
         'title': 'hit me up bro'
     },
-    'projects': {
-        'title': 'lol'
+    'about us': {
+        'title': 'projects'
     }
 };
 

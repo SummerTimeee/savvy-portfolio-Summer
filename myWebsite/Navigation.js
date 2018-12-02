@@ -3,13 +3,13 @@ export default function Navigation(){
 <div id=navigation>
 <ul class="container">
     <li>
-        <a href="./blog">blog</a>
+        <a href="./book an appointment">book an appointment</a>
     </li>
     <li>
-        <a href="./contact">contact</a>
+        <a href="./parts & tools">parts & tools</a>
     </li>
     <li>
-        <a href="./projects">projects</a>
+        <a href="./about us">about us</a>
         <ul class="dropdown">
             <li>review</li>
             <li>second</li>
