@@ -13,7 +13,7 @@
 
 }
 #navigation {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     position: sticky;
     top: 0;
     grid-area: navigation;
@@ -74,7 +74,6 @@ li {
     font-weight: 300;
     font-family: 'Times New Roman', Times, serif
 }
-
 #Summer {
     width: 80S%;
     max-width: 900px;
@@ -85,40 +84,35 @@ li {
 
 #Summer h1 {
     text-transform: uppercase;
-    color: rgb(0, 38, 255);
+    color: lightblue;
     text-align: left;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
+    background-color: yellow;
     background-size: 800px;
-    font-family: 'Fontdiner Swanky', cursive;
-    border-style: solid;
-    border-width: 50px 40px;
 }
 
-#Summer p{
-    font-family: 'Times New Roman', Times, serif
-    color: red;
-}
 
-h2 {
-    border-style: solid;
-    border-width: 45px 240px;
-    height: 20%;
-    width: 58%;
-    border-color:red;
+ p {
+    font-family: 'Times New Roman', Times, serif;
+    color: grey;
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    line-height: 2.0em;
     text-align: center;
-    font-family: 'Fontdiner Swanky', cursive;
-    font-size: 35px;
-    color: yellow;
-    background-color: royalblue;
-
+    border-style: ridge;
+    border-color: grey;
+    border-width: 3px 3px;
+    min-width: 400px;
+    max-width: 6900px;
+    background-color: whitesmoke;
+    
 }
 
 
 
-#img .img-one {
-    border-style: solid;
-    position: relative;
-}
+
+
 .content {
     text-align: center;
     margin: 0;
@@ -127,7 +121,7 @@ h2 {
 
 #footer {
     width: 100%;
-    background-color: rgb(197, 27, 21);
+    background-color: rgb(255, 30, 0);
     margin: 0;
     font-family: 'Bangers', cursive;
     grid-area: footer;

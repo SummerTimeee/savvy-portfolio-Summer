@@ -3,63 +3,34 @@ import Content from './src/Content';
 import Navigation from './src/Navigation';
 import Header from './src/Header';
 import Greeting from './src/Greeting';
-import greet from './src/Greeting';
-var State = {
-    'active': 'home',
-    'home': {
-        'title': 'My Savvy Coders Project'
-    },
-    'blog': {
-        'title': 'check out my blog'
-    },
-    'contact': {
-        'title': 'hit me up bro'
-    },
-    'about us': {
-        'title': 'projects'
-    }
-};
 
-var root = document.querySelector('#root');
 
-function handleNavigation(event){
-    event.preventDefault();
-
-    State.active = event.target.textContent;
-
-    render(State);
-}
-
-function render(state){
-    var links;
-
-    root.innerHTML = `
-    ${Content(state)}
-    ${Footer(state)}
-    ${Navigation(state)}
-    ${Header(state)}
+document.querySelector('#root').innerHTML =
+ `
+    ${Content()}
+    ${Footer()}
+    ${Navigation()}
+    ${Header()}
+    
     `;
+Greeting();
 
-    greet();
+// var userName = prompt('what is your name?');
 
-    links = document.querySelectorAll('#navigation a');
+// var title = document.querySelector('h1');
 
+// var greet = function greet(){
+// if(!userName){
+// userName = prompt('what is your name foreal this time?');
 
-    links[0].addEventListener(
-        'click',
-        handleNavigation
-    );
+// greet();
+//  }
+ 
 
-    links[1].addEventListener(
-        'click',
-        handleNavigation
-    );
+// else{
+// title.innerHTML += `, ${userName}`;
+// }
+// };
 
-
-    links[2].addEventListener(
-        'click',
-        handleNavigation
-    );
-}
-
-render(State);
+// greet();
+// var userName = prompt('What is you name?);
