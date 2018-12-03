@@ -1,36 +1,64 @@
-import Footer from './src/Footer';
 import Content from './src/Content';
-import Navigation from './src/Navigation';
+import Footer from './src/Footer';
+import greet from './src/Greeting';
 import Header from './src/Header';
-import Greeting from './src/Greeting';
+import Navigation from './src/Navigation';
 
 
-document.querySelector('#root').innerHTML =
- `
-    ${Content()}
-    ${Footer()}
-    ${Navigation()}
-    ${Header()}
-    
-    `;
-Greeting();
+var State = {
+    'active': 'home',
+    'home': {
+        'title': 'Welcome to my Savvy Coders Portfolio Project',
+    },
+    'blog': {
+        'title': 'Check out my Blog'
+    },
+    'contact': {
+        'title': 'Hit me up'
+    },
+    'projects': {
+        'title': 'Projects'
+    }
+};
 
-// var userName = prompt('what is your name?');
+var root = document.querySelector('#root');
 
-// var title = document.querySelector('h1');
+function handleNavigation(event){
+    event.preventDefault();
 
-// var greet = function greet(){
-// if(!userName){
-// userName = prompt('what is your name foreal this time?');
+    State.active = event.target.textContent;
 
-// greet();
-//  }
- 
+    render(State); // eslint-disable-line
+}
 
-// else{
-// title.innerHTML += `, ${userName}`;
-// }
-// };
+function render(state){
+    var links;
 
-// greet();
-// var userName = prompt('What is you name?);
+    root.innerHTML = `
+      ${Navigation(state)}
+      ${Header(state)}
+      ${Content(state)}
+      ${Footer(state)}
+  `;
+
+    greet();
+
+    links = document.querySelectorAll('#navigation a');
+
+    links[0].addEventListener(
+        'click',
+        handleNavigation
+    );
+
+    links[1].addEventListener(
+        'click',
+        handleNavigation
+    );
+
+    links[2].addEventListener(
+        'click',
+        handleNavigation
+    );
+}
+
+render(State);
