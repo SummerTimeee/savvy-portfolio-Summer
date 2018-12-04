@@ -2,21 +2,25 @@ import Footer from './src/Footer';
 import Content from './src/Content';
 import Navigation from './src/Navigation';
 import Header from './src/Header';
-import Greeting from './src/Greeting';
 import greet from './src/Greeting';
+
 var State = {
     'active': 'home',
     'home': {
-        'title': 'My Savvy Coders Project'
+        'title': 'My Savvy Coders Project',
+        'links': [ 'blog', 'contacts', 'projects' ]
     },
     'blog': {
-        'title': 'this is my blog'
+        'title': 'this is my blog',
+        'links': [ 'home', 'contact', 'projects' ]
     },
     'contact': {
-        'title': 'hit me up bro'
+        'title': 'hit me up bro',
+        'links': [ 'home', 'blog', 'projects' ]
     },
     'projects': {
-        'title': 'lol'
+        'title': 'lol',
+        'links': [ 'home', 'blog', 'contact' ]
     }
 };
 
@@ -27,39 +31,31 @@ function handleNavigation(event){
 
     State.active = event.target.textContent;
 
-    render(State);
+    console.log(State);
+    render(State); // eslint-disable-line
 }
 
 function render(state){
     var links;
 
+
     root.innerHTML = `
-    ${Content(state)}
-    ${Footer(state)}
     ${Navigation(state)}
     ${Header(state)}
+    ${Content(state)}
+    ${Footer(state)}
     `;
 
     greet();
 
     links = document.querySelectorAll('#navigation a');
 
-
-    links[0].addEventListener(
-        'click',
-        handleNavigation
-    );
-
-    links[1].addEventListener(
-        'click',
-        handleNavigation
-    );
-
-
-    links[2].addEventListener(
-        'click',
-        handleNavigation
-    );
+    for(let i = 0; i < links.length; i++){
+        links[i].addEventListener(
+            'click',
+            handleNavigation
+        );
+    }
 }
 
 render(State);

@@ -1,10 +1,8 @@
-export default function Header(){
+export default function Header(state){
     return `
 
     <div id="Summer">
-        <h1> Welcome to My Savvy Portfolio's Project</h1>
-    
-       
+        <h1>${state[state.active].title}</h1>
     </div>
 
     
