@@ -2,7 +2,7 @@ import Footer from './src/Footer';
 import Content from './src/Content';
 import Navigation from './src/Navigation';
 import Header from './src/Header';
-import greet from './src/Greeting';
+import Greet from './src/Greeting';
 import Navigo from 'navigo';
 
 var router = new Navigo(window.location.origin);
