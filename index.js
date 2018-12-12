@@ -3,6 +3,9 @@ import Content from './src/Content';
 import Navigation from './src/Navigation';
 import Header from './src/Header';
 import greet from './src/Greeting';
+import Navigo from 'navigo';
+
+var router = new Navigo(window.location.origin);
 
 var State = {
     'active': 'home',
@@ -26,36 +29,26 @@ var State = {
 
 var root = document.querySelector('#root');
 
-function handleNavigation(event){
-    event.preventDefault();
+function handleNavigation(params){
+    State.active = params.page;
 
-    State.active = event.target.textContent;
-
-    console.log(State);
     render(State); // eslint-disable-line
 }
 
 function render(state){
-    var links;
-
-
     root.innerHTML = `
-    ${Navigation(state)}
-    ${Header(state)}
-    ${Content(state)}
-    ${Footer(state)}
-    `;
+      ${Navigation(state)}
+      ${Header(state)}
+      ${Content(state)}
+      ${Footer(state)}
+  `;
 
     greet();
 
-    links = document.querySelectorAll('#navigation a');
-
-    for(let i = 0; i < links.length; i++){
-        links[i].addEventListener(
-            'click',
-            handleNavigation
-        );
-    }
+    router.updatePageLinks();
 }
 
-render(State);
+router
+    .on('/:page', handleNavigation)
+    .on('/', () => handleNavigation({ 'page': 'home' }))
+    .resolve();

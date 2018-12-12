@@ -9,10 +9,9 @@ export default function greet(){
 
         greet();
     }
- 
+
 
     else{
         title.innerHTML += `, ${userName}`;
     }
 }
-

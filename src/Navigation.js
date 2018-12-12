@@ -1,25 +1,33 @@
+import { capitalize } from 'lodash';
 
 
-export default function Navigation(state){
-    var links = state[state.active].links;
+function buildLinks(links){
     var list = '';
+    var link = '';
 
     for(let i = 0; i < links.length; i++){
+        if(links[i] !== 'home'){
+            link = links[i];
+        }
+
         list += `
-        <li>
-            <a href="#">${links[i]}</a>
-        </li>
+          <li>
+              <a href="/${link}" data-navigo>
+                ${capitalize(links[i])}
+              </a>
+          </li>
         `;
     }
 
+    return list;
+}
+
+export default function Navigation(state){
     return `
-<div id="navigation">
-<ul class="container">
-    ${list}
-    
+      <div id="navigation">
+        <ul class="container">
+          ${buildLinks(state[state.active].links)}
         </ul>
-
-</div>
-
-`;
+      </div>
+    `;
 }
