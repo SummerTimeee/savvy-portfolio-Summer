@@ -1,32 +1,29 @@
 import { capitalize } from 'lodash';
 
 
-function buildLinks(links){
-    var list = '';
-    var link = '';
-
-    for(let i = 0; i < links.length; i++){
-        if(links[i] !== 'home'){
-            link = links[i];
-        }
-
-        list += `
-          <li>
-              <a href="/${link}" data-navigo>
-                ${capitalize(links[i])}
-              </a>
-          </li>
-        `;
+function buildLink(link){
+    var href = '';
+    
+    if(link !== 'home'){
+        href = link;
     }
 
-    return list;
+    return `
+
+    <li>
+        <a href="/${href}" data-navigo>
+      ${capitalize(link)}
+       </a>
+     </li>
+    
+    `;
 }
 
 export default function Navigation(state){
     return `
       <div id="navigation">
         <ul class="container">
-          ${buildLinks(state[state.active].links)}
+          ${state[state.active].links.map(buildLink).join('')}
         </ul>
       </div>
     `;

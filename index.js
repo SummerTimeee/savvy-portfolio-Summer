@@ -4,7 +4,7 @@ import Navigation from './src/Navigation';
 import Header from './src/Header';
 import greet from './src/Greeting';
 import Navigo from 'navigo';
-import { capitalize } from 'lodash';
+
 
 var router = new Navigo(window.location.origin);
 
@@ -31,7 +31,7 @@ var State = {
 var root = document.querySelector('#root');
 
 function handleNavigation(params){
-    State.active = capitalize(params.page);
+    State.active = params.page;
 
     render(State); // eslint-disable-line
 }
