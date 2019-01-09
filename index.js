@@ -4,11 +4,13 @@ import Navigation from './src/Navigation';
 import Header from './src/Header';
 import greet from './src/Greeting';
 import Navigo from 'navigo';
+import { addListener } from 'cluster';
 
 
 var router = new Navigo(window.location.origin);
 
 var State = {
+    'posts': [],
     'active': 'home',
     'home': {
         'title': 'My Savvy Coders Project',
@@ -28,12 +30,31 @@ var State = {
     }
 };
 
-var root = document.querySelector('#root');
+class Store{
+    constructor(state){
+        this.listener = () => {};
+        this.state = state;
+    }
+
+    dispatch(reducer){
+        this.state = reducer(this.state);
+
+        render(this.state);
+    }
+
+addListener(listener){
+
+}
+
+var store = new Store(State);
+
 
 function handleNavigation(params){
-    State.active = params.page;
-
-    render(State); // eslint-disable-line
+    store.dispatch((state) => {
+        state.active = params.page;
+        
+        return state;
+    });
 }
 
 function render(state){
@@ -53,3 +74,11 @@ router
     .on('/:page', handleNavigation)
     .on('/', () => handleNavigation({ 'page': 'home' }))
     .resolve();
+
+fetch('https://jsonplaceholder.typicode.com/posts')
+    .then((response) => response.json())
+    .then((posts) => {
+        State.posts = posts ;
+
+        render(State);
+    });
